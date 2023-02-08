@@ -1,0 +1,216 @@
+// .home {
+  .content {
+    overflow: hidden;
+  }
+  .hero {
+    background: rgb(224, 235, 241);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 2rem;
+
+    .hero-content {
+      display: flex;
+      img {
+        width: 40%;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+      h2 {
+        animation: bounceIn 2s linear alternate;
+      }
+      h4 {
+        animation: zoomIn 1s linear alternate;
+      }
+      a {
+        animation: slideInUp 0.5s linear alternate;
+      }
+      .title {
+        margin: 0;
+        font-family: Poppins-Light;
+        font-weight: 700;
+        // text-transform: uppercase;
+        color: #0c1f31;
+        font-size: 30px;
+        line-height: 1;
+      }
+      .desc {
+        font-size: 25px;
+        font-family: Poppins-Light;
+        font-weight: 300;
+        line-height: 1.3;
+        padding-top: 25px;
+        color: #1b2127;
+        margin-left: 20px;
+      }
+      .btn-hero {
+        font-size: 15px;
+        line-height: 1;
+        padding: 10px 20px;
+        display: inline-block;
+        margin-top: 25px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        img {
+          width: 100%;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .service-wrap {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 0;
+    .p-1 {
+      padding: 5px;
+    }
+    .service-card {
+      position: relative;
+      z-index: 1;
+      transition: 0.4s;
+      background-color: #fff;
+      border-radius: 5px;
+      // padding: 5px;
+      .service-info {
+        margin: 5px;
+        padding: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // overflow: hidden;
+        .service-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+          width: 100%;
+          span {
+            position: relative;
+            top: 0;
+            transition: 0.8s;
+            text-align: center;
+            width: 65px;
+            height: 65px;
+            border: 1px solid rgba(0, 169, 164, 0.6);
+            border-radius: 7px;
+            padding: 5px;
+            img {
+              height: 100%;
+              width: 100%;
+              border-radius: 10px;
+              background-color: #fff;
+            }
+            i {
+              font-size: 50px;
+              border-radius: 10px;
+              background-color: #fff;
+            }
+          }
+          span:after,
+          span:before {
+            position: absolute;
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #00a9a4;
+          }
+          span:before {
+            top: 10px;
+            left: -4px;
+            animation: slide_up 3000ms infinite ease-in-out;
+          }
+          span:after {
+            bottom: 10px;
+            right: -4px;
+          }
+          h3 {
+            width: calc(100% - 70px);
+            margin-bottom: 0;
+            font-size: 22px;
+          }
+        }
+        p {
+          color: #555;
+          margin-bottom: 0;
+          transition: 0.5s;
+        }
+      }
+    }
+
+    .service-card:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      border-radius: 5px;
+      content: "";
+      z-index: -1;
+      background-color: #00a9a4;
+      transition: 0.3s;
+    }
+    .service-card:hover:after {
+      height: 100%;
+    }
+    .service-card:hover .service-info .service-title h3 {
+      color: #fff;
+    }
+    .service-card:hover .service-info p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .service-card:hover .service-info .service-title span {
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .service-card:hover .service-info .service-title span:after,
+    .service-card:hover .service-info .service-title span:before {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .service-info p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .our_sponsors_section {
+    background-color: rgb(224, 235, 241);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 2rem;
+    .our-sponsors-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .our_sponsors_img {
+        width: 140px;
+        height: 100px;
+        margin: 5px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #dddddd;
+        transition: all 0.3s;
+
+        img {
+          width: 100%;
+        }
+      }
+      .our_sponsors_img:hover {
+        background-color: #fff;
+      }
+    }
+  }
+// }
