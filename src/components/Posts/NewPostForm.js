@@ -112,7 +112,7 @@ export default function NewPostForm() {
   return (
     <div className="post-container group">
       <div className="top-form">
-        <NavLink exact to="/profil">
+        <NavLink exact to="/user">
           <div className="user-info">
             <img src={user?.photoURL} alt="avatar" />
           </div>

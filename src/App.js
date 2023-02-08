@@ -20,7 +20,7 @@ import UpdateProfile from "./components/authentication/UpdateProfile";
 import AssisteMyThesisDefence from "./components/services/AssistMyThesisDefence";
 import MeTree from "./components/services/MeTree";
 import PushMyProject from "./components/services/PushMyProject";
-// import LeafDetails from "./components/Posts/LeafDetails";
+import LeafDetails from "./components/Posts/LeafDetails";
 
 export default function App() {
   return (
@@ -29,13 +29,13 @@ export default function App() {
       <AuthProvider>
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
-          {/* <PrivateRoute exact path="/:id" component={LeafDetails} /> */}
+          {/* <PrivateRoute path="/:id" component={LeafDetails} /> */}
           <PrivateRoute exact path="/library" component={Library} />
           {/* <PrivateRoute exact path="/library/my-file" component={MyFiles} /> */}
           {/* <PrivateRoute exact path="/library/folder/:folderId" component={Library} /> */}
 
           {/* Profile */}
-          <Route path="/user" component={Profile} />
+          <Route exact path="/user" component={Profile} />
           <Route path="/update-profile" component={UpdateProfile} />
 
           {/* Auth */}
@@ -43,7 +43,7 @@ export default function App() {
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
 
-          <Route path="/services" component={Services} />
+          <Route exact path="/services" component={Services} />
           <Route
             path="/services/assist-my-thesis-defense"
             component={AssisteMyThesisDefence}

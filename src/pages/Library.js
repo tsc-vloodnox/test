@@ -14,7 +14,7 @@ const Library = () => {
             <NavLink exact to="/library">
               Dashbord
             </NavLink>
-            <NavLink exact to="/my-files">
+            <NavLink exact to="/library//my-files">
               My files
             </NavLink>
           </div>
